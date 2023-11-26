@@ -1,0 +1,34 @@
+To get started please refer to the Readme.txt file.
+
+The following are all the commands that users can run via the terminal.
+
+0. exit : terminates the database connection and program.
+
+1. signup: creates an account. prompts for username (string), email (string), and password (string).
+
+2. login : lets user login. prompts for username (string) and password (string). 
+
+3. userinfo : prints out the current user that is logged in.
+
+4. logout : logouts the current user.
+
+5. show_all_posts : prints out all current posts available to read. prints the postID, Title, Author, Likes, and Dislikes.
+
+6. show_my_post : prints out the postID, Title, Likes and Dislikes of the post that the logged in user has published.
+
+7. read_post : prompts for a PostID. Prints out the postID, Title, Author, Likes, Dislikes and Content.
+
+8. show_post_comments : prompts for PostID. Then if prints out the comments along with the amount of likes and dislikes on each comment.
+
+9. rate_post : prompts for postID. Enter L for liking the post or D for disliking the post.
+
+10. rate_comment : prompts for the commentID
+
+11. write_comment : prompts for postID. Lets user write a comment on that post
+
+12. write_post : writes a post. Prompts title (string) and the content of the blog post (string).
+
+13. edit_post : takes in a postID and lets the user edit the post. Then push the changes to the database.
+
+14. delete_post : takes in postID and deletes the post. Also delete all associated comments and likes.dislikes. 
+
