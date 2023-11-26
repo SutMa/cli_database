@@ -36,9 +36,19 @@ To run enter the following command into command prompt "testQueries.exe"
 Keep in mind this is for Windows machine. 
 To run executable on MacOS, install Wine through Homebrew. 
 Once Wine is installed run "wine testQueries.exe"
+
 Keep in mind for this to work, you will need to create a .env file in the root project folder
 or the same folder as the executable. Refer to the instructions above for more info about .env files.
+
 The source code for the test queries are in testQueries.js file. 
+For reference the following is the test queries: 
+"SELECT Users.Username, BlogPosts.Title FROM Users LEFT JOIN BlogPosts ON Users.UserID = BlogPosts.UserID;",
+    "SELECT BlogPosts.PostID, BlogPosts.Title, COUNT(DISTINCT Likes.LikeID) AS TotalLikes, COUNT(DISTINCT Dislikes.DislikeID) AS TotalDislikes FROM BlogPosts LEFT JOIN Likes ON BlogPosts.PostID = Likes.PostID LEFT JOIN Dislikes ON BlogPosts.PostID = Dislikes.PostID GROUP BY BlogPosts.PostID;",
+    "SELECT Users.Username, Comments.CommentText FROM Comments JOIN Users ON Comments.UserID = Users.UserID;",
+    "SELECT Comments.CommentID, COUNT(CommentLikes.CommentLikeID) AS LikeCount, COUNT(CommentDislikes.CommentDislikeID) AS DislikeCount FROM Comments LEFT JOIN CommentLikes ON Comments.CommentID = CommentLikes.CommentID LEFT JOIN CommentDislikes ON Comments.CommentID = CommentDislikes.CommentID GROUP BY Comments.CommentID;",
+    "SELECT 'User' AS EntityType, UserID AS EntityID, CreatedAt FROM Users UNION ALL SELECT 'BlogPost', PostID, CreatedAt FROM BlogPosts UNION ALL SELECT 'Comment', CommentID, CreatedAt FROM Comments ORDER BY CreatedAt DESC;"
+
+To run type in the terminal testQueries.exe:
 The outcome of the test queries should be printed in the terminal as follows: 
 *************************************************************************************************************************
 Query:  SELECT Users.Username, BlogPosts.Title FROM Users LEFT JOIN BlogPosts ON Users.UserID = BlogPosts.UserID;
