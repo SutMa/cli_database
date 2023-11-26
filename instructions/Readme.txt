@@ -48,7 +48,7 @@ For reference the following is the test queries:
     "SELECT Comments.CommentID, COUNT(CommentLikes.CommentLikeID) AS LikeCount, COUNT(CommentDislikes.CommentDislikeID) AS DislikeCount FROM Comments LEFT JOIN CommentLikes ON Comments.CommentID = CommentLikes.CommentID LEFT JOIN CommentDislikes ON Comments.CommentID = CommentDislikes.CommentID GROUP BY Comments.CommentID;",
     "SELECT 'User' AS EntityType, UserID AS EntityID, CreatedAt FROM Users UNION ALL SELECT 'BlogPost', PostID, CreatedAt FROM BlogPosts UNION ALL SELECT 'Comment', CommentID, CreatedAt FROM Comments ORDER BY CreatedAt DESC;"
 
-To run type in the terminal testQueries.exe:
+To run type in the terminal "testQueries.exe":
 The outcome of the test queries should be printed in the terminal as follows: 
 *************************************************************************************************************************
 Query:  SELECT Users.Username, BlogPosts.Title FROM Users LEFT JOIN BlogPosts ON Users.UserID = BlogPosts.UserID;
