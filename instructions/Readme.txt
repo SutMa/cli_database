@@ -14,7 +14,7 @@ To start make sure you are in the root folder:
     DB_PASSWORD=PasswordHere
     DB_DATABASE=blog_database
    Make sure to replace the variables that reflect your mySQL database for the connection to work.
-   This includes, but limited to things like DB_PASSWORD and others variables that are specific to your system.
+   This includes, but not limited to things like DB_PASSWORD and others variables that are specific to your system.
 3. run "npm run start"
 With this the program will run.
 
